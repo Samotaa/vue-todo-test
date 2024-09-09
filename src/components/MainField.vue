@@ -4,6 +4,7 @@ import TaskList from "./TaskList.vue";
 import BottomButtons from "./BottomButtons.vue";
 import ProgressBars from "./ProgressBars.vue";
 import TopField from "./TopField.vue";
+import TasksDone from "./TasksDone.vue";
 
 </script>
 
@@ -16,5 +17,6 @@ import TopField from "./TopField.vue";
     <TaskList />
     <ProgressBars />
     <BottomButtons />
+    <TasksDone />
   </div>
 </template>

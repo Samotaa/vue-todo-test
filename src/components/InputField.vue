@@ -22,7 +22,7 @@ const addItem = () => {
       v-model="text"
       type="text"
       name="input"
-      placeholder="Add new todo"
+      placeholder="Add new todo..."
     />
     <button
       v-if="text"

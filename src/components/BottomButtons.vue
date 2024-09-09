@@ -3,7 +3,7 @@ import { useListStore } from "../store/listStore";
 import { storeToRefs } from "pinia";
 
 const listStore = useListStore();
-const { filter, activeTasks, doneTasks } = storeToRefs(listStore);
+const { filter, activeTasks, doneTasks, list } = storeToRefs(listStore);
 
 // Changes the style of the active button
 const setButtonStyle = (type) => {
@@ -29,6 +29,7 @@ const setButtonStyle = (type) => {
 
     <div class="flex flex-row gap-[5px] md:gap-0 justify-center items-center">
       <div
+        v-if="list.length > 0"
         class="py-[6px] px-[12px] dark:text-[white] hover:cursor-pointer"
         :class="setButtonStyle('all')"
         @click="filter = 'all'"
