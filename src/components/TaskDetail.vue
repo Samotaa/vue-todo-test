@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { useThemeStore } from "../store/themeStore";
-import { icons } from "./Icons";
+import { icons } from "../icons/Icons";
 import { useListStore } from "../store/listStore";
 
 const props = defineProps(["item"]);
@@ -33,7 +33,7 @@ const closeEdit = () => {
 </script>
 
 <template>
-  <div class="flex w-[200px] h-[80px] dark:text-[white] text-[14px]">
+  <div class="flex w-[200px] h-[20px] dark:text-[white] text-[14px]">
     <input
       :checked="item.is_completed"
       @click="toggleTask"
