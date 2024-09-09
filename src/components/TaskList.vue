@@ -24,7 +24,6 @@ const updateTaskCompletion = (item, isCompleted) => {
     });
   }
 };
-
 </script>
 
 <template>
@@ -40,13 +39,11 @@ const updateTaskCompletion = (item, isCompleted) => {
   >
     <div class="w-[410px] pl-[10px]">
       <div v-if="filter === 'all'">
-        <VueDraggable
-          ref="el"
-          v-model="list"
-        >
+        <VueDraggable ref="el" v-model="list" handle=".drag-handle">
           <div
             class="w-full h-[25px] flex justify-between mb-[16px]"
             v-for="item in list"
+            :key="item._id"
           >
             <TaskDetail :item="item" @update-completed="updateTaskCompletion" />
           </div>
@@ -56,6 +53,7 @@ const updateTaskCompletion = (item, isCompleted) => {
         <div
           class="w-full h-[25px] flex justify-between mb-[16px]"
           v-for="item in activeTasks"
+          :key="item._id"
         >
           <TaskDetail :item="item" @update-completed="updateTaskCompletion" />
         </div>
@@ -64,6 +62,7 @@ const updateTaskCompletion = (item, isCompleted) => {
         <div
           class="w-full h-[25px] flex justify-between mb-[16px]"
           v-for="item in doneTasks"
+          :key="item._id"
         >
           <TaskDetail :item="item" @update-completed="updateTaskCompletion" />
         </div>

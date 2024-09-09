@@ -36,7 +36,7 @@ onMounted(() => {
 <template>
   <div :class="theme ? 'dark' : 'light'">
     <div
-      class="w-screen h-screen flex justify-center items-center"
+      class="w-screen h-screen flex justify-center items-center overflow-y-hidden"
       :class="
         theme
           ? 'dark:bg-[#202225]'

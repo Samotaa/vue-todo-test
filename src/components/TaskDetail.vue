@@ -34,6 +34,11 @@ const closeEdit = () => {
 
 <template>
   <div class="flex w-[200px] h-[20px] dark:text-[white] text-[14px]">
+    <component
+      v-if="listStore.filter === 'all'"
+      class="hover:cursor-pointer pr-[5px] drag-handle"
+      :is="icons['dots']"
+    />
     <input
       :checked="item.is_completed"
       @click="toggleTask"
