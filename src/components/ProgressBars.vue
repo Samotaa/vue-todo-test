@@ -11,6 +11,7 @@ const { allTasks, doneTasks, activeTasks } = storeToRefs(listStore);
 const doneTasksCountText = computed(() => {
   return doneTasks.value.length === 1 ? "task" : "tasks";
 });
+
 const activeTasksCountText = computed(() => {
   return activeTasks.value.length === 1 ? "task" : "tasks";
 });

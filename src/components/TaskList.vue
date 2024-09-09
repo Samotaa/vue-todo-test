@@ -7,9 +7,9 @@ import { MoonLoader } from "vue3-spinner";
 import { VueDraggable } from "vue-draggable-plus";
 
 const listStore = useListStore();
-const { activeTasks, doneTasks, filter, list, loading } =
-  storeToRefs(listStore);
+const { activeTasks, doneTasks, filter, list, loading } = storeToRefs(listStore);
 
+// Updates is_completed of the task
 const updateTaskCompletion = (item, isCompleted) => {
   const taskIndex = listStore.list.findIndex((task) => task._id === item._id);
   if (taskIndex !== -1) {

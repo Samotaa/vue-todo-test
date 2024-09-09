@@ -13,20 +13,24 @@ const emit = defineEmits(["update-completed"]);
 const showEdit = ref(false);
 const newTitle = ref("");
 
+// emits item and his is_completed
 const toggleTask = () => {
   emit("update-completed", props.item, !props.item.is_completed);
 };
 
+// shows edit panel
 const editItem = (item) => {
   showEdit.value = true;
   newTitle.value = item.title;
 };
 
+// updates the item
 const updateItem = (item) => {
   listStore.updateItem(item, newTitle.value);
   showEdit.value = false;
 };
 
+// closes edit panel
 const closeEdit = () => {
   showEdit.value = false;
 };
@@ -37,7 +41,7 @@ const closeEdit = () => {
     <component
       v-if="listStore.filter === 'all'"
       class="hover:cursor-pointer pr-[5px] drag-handle"
-      :is="icons['dots']"
+      :is="themeStore.theme ? icons['dotsWhite'] : icons['dotsBlack']"
     />
     <input
       :checked="item.is_completed"

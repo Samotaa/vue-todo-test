@@ -6,6 +6,7 @@ const listStore = useListStore()
 
 const text = ref("")
 
+// Adds a new item to the list
 const addItem = () => {
   listStore.addToList(text.value)
   text.value = ""

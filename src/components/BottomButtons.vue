@@ -5,6 +5,7 @@ import { storeToRefs } from "pinia";
 const listStore = useListStore();
 const { filter, activeTasks, doneTasks } = storeToRefs(listStore);
 
+// Changes the style of the active button
 const setButtonStyle = (type) => {
   const buttonStyle = "bg-[#2578F4] dark:bg-[#7289da] text-[#FFFFFF] rounded-[10px]"
   if (filter.value === type) {

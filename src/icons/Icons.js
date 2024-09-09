@@ -5,7 +5,8 @@ import CloseBlackIcon from './CloseBlackIcon.vue';
 import AcceptBlackIcon from './AcceptBlackIcon.vue';
 import CloseWhiteIcon from './CloseWhiteIcon.vue';
 import AcceptWhiteIcon from './AcceptWhiteIcon.vue';
-import DotsIcon from './DotsIcon.vue';
+import DotsBlackIcon from './DotsBlackIcon.vue';
+import DotsWhiteIcon from './DotsWhiteIcon.vue';
 
 // Export an object mapping icon names to components
 export const icons = {
@@ -16,5 +17,6 @@ export const icons = {
     'acceptBlack'   : AcceptBlackIcon,
     'closeWhite'    : CloseWhiteIcon,
     'acceptWhite'   : AcceptWhiteIcon,
-    'dots'          : DotsIcon,
+    'dotsBlack'     : DotsBlackIcon,
+    'dotsWhite'     : DotsWhiteIcon
 };
