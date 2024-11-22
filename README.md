@@ -1,67 +1,59 @@
-# Тестовое задание на Vue
+## Implemented in the project:
 
-## Развернутый проект: 
+1. Full basic functionality of the To-do list.
+2. List data is stored on the server.
+3. Dark theme implemented.
+4. Responsive design.
 
-[Открыть](https://samotaa.github.io/vue-todo-test/)
+## Challenges encountered during development:
 
-## Реализовано в проекте:
+1. The found API does not have an endpoint for bulk deletion of items, so the item deletion request had to be executed in a loop.
+2. The list is not saved on the server after dragging and dropping an item, as there is no endpoint available to do this.
 
-1. Весь основной функционал To do листа.
-2. Данные листа хранятся на сервере.
-3. Реализована тёмная тема.
-4. Адаптивный дизайн.
+## Description
 
-## Нюансы, возникшие при разработке
+This project is built on **Vue 3** using the **Composition API**. The following libraries are used in the project:
 
-1. В найденной API нет эндпоинта для массового удаления элементов, поэтому пришлось выполнять запрос удаления элемента в цикле.
-2. Список не сохраняется на сервере после перетаскивания элемента, поскольку нет эндпоинта, позволяющего это сделать.
+- **Axios** —  for making HTTP requests.
+- **Pinia** — for state management.
+- **vue3-spinner** — for displaying loading indicators.
+- **vue-draggable-plus** — for implementing drag-and-drop functionality.
+- **Tailwind CSS** — for styling using a utility-first approach.
 
-## Затраченное время на реализацию: 2 дня
+## Installation
 
-## Описание
-
-Этот проект построен на **Vue 3** с использованием **Composition API**. В проекте используются следующие библиотеки:
-
-- **Axios** — для выполнения HTTP-запросов.
-- **Pinia** — для управления состоянием.
-- **vue3-spinner** — для отображения индикаторов загрузки.
-- **vue-draggable-plus** — для реализации функциональности перетаскивания (drag-and-drop).
-- **Tailwind CSS** — для стилизации с использованием utility-first подхода.
-
-## Установка
-
-1. Клонируйте репозиторий:
+1. Clone the repository:
 
     ```bash
     git clone https://github.com/Samotaa/vue-todo-test.git
     ```
 
-2. Перейдите в директорию проекта:
+2. Navigate to the project directory:
 
     ```bash
     cd vue-todo-test
     ```
 
-3. Установите зависимости:
+3. Install dependencies:
 
-    Если используете npm:
+    If using npm:
     ```bash
     npm install
     ```
 
-    Если используете yarn:
+    If using yarn:
     ```bash
     yarn install
     ```
 
-4. Запуск проекта:
+4. Run the project:
 
-    Если используете npm:
+    If using npm:
     ```bash
     npm run dev
     ```
 
-    Если используете yarn:
+    If using yarn:
     ```bash
     yarn dev
     ```
